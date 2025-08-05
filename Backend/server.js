@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, "frontend")));
 
 // API routes can be handled here or require other modules
-require('/backend/drainer.js'); // optional, if needed
+require('./drainer.js'); // optional, if needed
 
 // Default route
 app.get("*", (req, res) => {
