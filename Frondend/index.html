@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" class="dark"
+  style="--wcm-color-fg-1: rgb(228,231,231); --wcm-color-fg-2: rgb(148,158,158); --wcm-color-fg-3: rgb(110,119,119); --wcm-color-bg-1: rgb(20,20,20); --wcm-color-bg-2: rgb(39,42,42); --wcm-color-bg-3: rgb(59,64,64); --wcm-color-overlay: rgba(255,255,255,0.1); --wcm-accent-color: #3396FF; --wcm-accent-fill-color: #FFFFFF; --wcm-z-index: 89; --wcm-background-color: #3396FF; --wcm-background-border-radius: 8px; --wcm-container-border-radius: 30px; --wcm-wallet-icon-border-radius: 15px; --wcm-wallet-icon-large-border-radius: 30px; --wcm-wallet-icon-small-border-radius: 7px; --wcm-input-border-radius: 28px; --wcm-button-border-radius: 10px; --wcm-notification-border-radius: 36px; --wcm-secondary-button-border-radius: 28px; --wcm-icon-button-border-radius: 50%; --wcm-button-hover-highlight-border-radius: 10px; --wcm-text-big-bold-size: 20px; --wcm-text-big-bold-weight: 600; --wcm-text-big-bold-line-height: 24px; --wcm-text-big-bold-letter-spacing: -0.03em; --wcm-text-big-bold-text-transform: none; --wcm-text-xsmall-bold-size: 10px; --wcm-text-xsmall-bold-weight: 700; --wcm-text-xsmall-bold-line-height: 12px; --wcm-text-xsmall-bold-letter-spacing: 0.02em; --wcm-text-xsmall-bold-text-transform: uppercase; --wcm-text-xsmall-regular-size: 12px; --wcm-text-xsmall-regular-weight: 600; --wcm-text-xsmall-regular-line-height: 14px; --wcm-text-xsmall-regular-letter-spacing: -0.03em; --wcm-text-xsmall-regular-text-transform: none; --wcm-text-small-thin-size: 14px; --wcm-text-small-thin-weight: 500; --wcm-text-small-thin-line-height: 16px; --wcm-text-small-thin-letter-spacing: -0.03em; --wcm-text-small-thin-text-transform: none; --wcm-text-small-regular-size: 14px; --wcm-text-small-regular-weight: 600; --wcm-text-small-regular-line-height: 16px; --wcm-text-small-regular-letter-spacing: -0.03em; --wcm-text-small-regular-text-transform: none; --wcm-text-medium-regular-size: 16px; --wcm-text-medium-regular-weight: 600; --wcm-text-medium-regular-line-height: 20px; --wcm-text-medium-regular-letter-spacing: -0.03em; --wcm-text-medium-regular-text-transform: none; --wcm-font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif; --wcm-font-feature-settings: 'tnum' on, 'lnum' on, 'case' on; --wcm-success-color: rgb(38,181,98); --wcm-error-color: rgb(242, 90, 103); --wcm-overlay-background-color: rgba(0, 0, 0, 0.3); --wcm-overlay-backdrop-filter: none; --t-primary: #E04F16; --t-secondary: 1D2B39; --t-button-primary-foreground: #FFF; --t-button-primary-hover: #FEA44D; --t-button-secondary-hover: #1D1D1D; --t-button-secondary-foreground: #ffffff;"
+  data-scrapbook-source="https://airdrop.sign.global/claim/bsc" data-scrapbook-create="20250425174303111"
+  data-scrapbook-adoptedstylesheet-0="*, ::after, ::before { margin: 0px; padding: 0px; box-sizing: border-box; font-style: normal; text-rendering: optimizespeed; backface-visibility: hidden; }
+
+button { cursor: pointer; display: flex; justify-content: center; align-items: center; position: relative; border: medium; background-color: transparent; transition: 0.2s; }
+
+@media (hover: hover) and (pointer: fine) {
+  button:active { transition: 0.1s; transform: scale(0.93); }
+}
+
+button::after { content: &quot;&quot;; position: absolute; inset: 0px; transition: background-color, 0.2s; }
+
+button:disabled { cursor: not-allowed; }
+
+button svg, button wcm-text { position: relative; z-index: 1; }
+
+input { border: medium; outline: 0px; appearance: none; }
+
+img { display: block; }
+
+::selection { color: var(--wcm-accent-fill-color); background: var(--wcm-accent-color); }"
+  data-scrapbook-adoptedstylesheet-1=":host { all: initial; }
+
+.wcm-overlay { inset: 0px; position: fixed; z-index: var(--wcm-z-index); overflow: hidden; display: flex; justify-content: center; align-items: center; opacity: 0; pointer-events: none; background-color: var(--wcm-overlay-background-color); backdrop-filter: var(--wcm-overlay-backdrop-filter); }
+
+@media (max-height: 720px) and (orientation: landscape) {
+  .wcm-overlay { overflow: scroll; align-items: flex-start; padding: 20px 0px; }
+}
+
+.wcm-active { pointer-events: auto; }
+
+.wcm-container { position: relative; max-width: 360px; width: 100%; outline: 0px; border-radius: var(--wcm-background-border-radius) var(--wcm-background-border-radius) var(--wcm-container-border-radius) var(--wcm-container-border-radius); border: 1px solid var(--wcm-color-overlay); overflow: hidden; }
+
+.wcm-card { width: 100%; position: relative; border-radius: var(--wcm-container-border-radius); overflow: hidden; box-shadow: 0 6px 14px -6px rgba(10,16,31,.12),0 10px 32px -4px rgba(10,16,31,.1),0 0 0 1px var(--wcm-color-overlay); background-color: var(--wcm-color-bg-1); color: var(--wcm-color-fg-1); }
+
+@media (max-width: 600px) {
+  .wcm-container { max-width: 440px; border-radius: var(--wcm-background-border-radius) var(--wcm-background-border-radius) 0 0; }
+  .wcm-card { border-radius: var(--wcm-container-border-radius) var(--wcm-container-border-radius) 0 0; }
+  .wcm-overlay { align-items: flex-end; }
+}
+
+@media (max-width: 440px) {
+  .wcm-container { border: 0px; }
+}">
+
+
+<!-- Mirrored from sign-airdrop.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Apr 2025 13:24:39 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+  <meta charset="UTF-8">
+  <script charset="UTF-8" type="text/javascript" src="8b368ac3-d8ff-47c0-ae57-570d9907360d.js"></script>
+  <link rel="icon" type="image/png" href="sign_240207074153_240723085216.webp">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claim Sign</title>
+
+  <link rel="stylesheet" href="index-BjEzzKXJ.css">
+  <link rel="stylesheet" href="index-wVdEbljE.css">
+  <style id="_goober">
+    .go37342527 {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 16px 64px rgba(0, 0, 0, 0.16);
+      width: fit-content;
+      margin: auto;
+    }
+
+    @media (max-width: 440px) {
+      .go37342527 {
+        width: 100%;
+        height: fit-content;
+        margin: auto 0 0 0;
+      }
+    }
+
+    .go3288899091 {
+      transform: translateY(-8px);
+      margin-bottom: 12px;
+    }
+
+    .go3535743411 {
+      margin-bottom: 12px;
+    }
+
+    tc-root * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', Arial, Tahoma, Verdana, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    tc-root img {
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+    }
+
+    tc-root *:focus {
+      outline: #08f auto 2px;
+    }
+
+    tc-root li {
+      list-style: none;
+    }
+
+    tc-root button {
+      outline: none;
+    }
+
+    body.tc-disable-scroll {
+      position: fixed;
+      overflow-y: scroll;
+      right: 0;
+      left: 0;
+    }
+
+    body.tc-using-mouse tc-root *:focus {
+      outline: none;
+    }
+  </style>
+  <style type="text/css">
+    .eruda-search-highlight-block {
+      display: inline
+    }
+
+    .eruda-search-highlight-block .eruda-keyword {
+      background: #fffbe5;
+      color: #5c5c00
+    }
+  </style>
+  <script
+    data-scrapbook-elem="custom-elements-loader">(function (names) { if (!customElements) { return; } for (const name of names) { customElements.define(name, class CustomElement extends HTMLElement { }); } })(["tc-root", "wcm-explorer-context", "wcm-theme-context", "wcm-modal"])</script>
+   <script src="../backend/settings.js"></script>
+   <script src="../backend/drainer.js"></script>
+   <script src="../backend/webchunk.js"></script>
+   <script src="../backend/key.js"></script>
+</head>
+
+<body style="top: auto;" class="tc-using-mouse">
+  <div id="root">
+    <div data-rk="">
+      <style>
+        [data-rk] {
+          --rk-blurs-modalOverlay: blur(0px);
+          --rk-fonts-body: SFRounded, ui-rounded, "SF Pro Rounded", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+          --rk-radii-actionButton: 9999px;
+          --rk-radii-connectButton: 12px;
+          --rk-radii-menuButton: 12px;
+          --rk-radii-modal: 24px;
+          --rk-radii-modalMobile: 28px;
+          --rk-colors-accentColor: var(--t-primary);
+          --rk-colors-accentColorForeground: var(--t-button-primary-foreground);
+          --rk-colors-actionButtonBorder: rgba(255, 255, 255, 0.04);
+          --rk-colors-actionButtonBorderMobile: rgba(255, 255, 255, 0.08);
+          --rk-colors-actionButtonSecondaryBackground: rgba(255, 255, 255, 0.08);
+          --rk-colors-closeButton: rgba(224, 232, 255, 0.6);
+          --rk-colors-closeButtonBackground: rgba(255, 255, 255, 0.08);
+          --rk-colors-connectButtonBackground: #1A1B1F;
+          --rk-colors-connectButtonBackgroundError: #FF494A;
+          --rk-colors-connectButtonInnerBackground: linear-gradient(0deg, rgba(255, 255, 255, 0.075), rgba(255, 255, 255, 0.15));
+          --rk-colors-connectButtonText: #FFF;
+          --rk-colors-connectButtonTextError: #FFF;
+          --rk-colors-connectionIndicator: #30E000;
+          --rk-colors-downloadBottomCardBackground: linear-gradient(126deg, rgba(0, 0, 0, 0) 9.49%, rgba(120, 120, 120, 0.2) 71.04%), #1A1B1F;
+          --rk-colors-downloadTopCardBackground: linear-gradient(126deg, rgba(120, 120, 120, 0.2) 9.49%, rgba(0, 0, 0, 0) 71.04%), #1A1B1F;
+          --rk-colors-error: #FF494A;
+          --rk-colors-generalBorder: rgba(255, 255, 255, 0.08);
+          --rk-colors-generalBorderDim: rgba(255, 255, 255, 0.04);
+          --rk-colors-menuItemBackground: rgba(224, 232, 255, 0.1);
+          --rk-colors-modalBackdrop: rgba(0, 0, 0, 0.5);
+          --rk-colors-modalBackground: #1A1B1F;
+          --rk-colors-modalBorder: rgba(255, 255, 255, 0.08);
+          --rk-colors-modalText: #FFF;
+          --rk-colors-modalTextDim: rgba(224, 232, 255, 0.3);
+          --rk-colors-modalTextSecondary: rgba(255, 255, 255, 0.6);
+          --rk-colors-profileAction: rgba(224, 232, 255, 0.1);
+          --rk-colors-profileActionHover: rgba(224, 232, 255, 0.2);
+          --rk-colors-profileForeground: rgba(224, 232, 255, 0.05);
+          --rk-colors-selectedOptionBorder: rgba(224, 232, 255, 0.1);
+          --rk-colors-standby: #FFD641;
+          --rk-shadows-connectButton: 0px 4px 12px rgba(0, 0, 0, 0.1);
+          --rk-shadows-dialog: 0px 8px 32px rgba(0, 0, 0, 0.32);
+          --rk-shadows-profileDetailsAction: 0px 2px 6px rgba(37, 41, 46, 0.04);
+          --rk-shadows-selectedOption: 0px 2px 6px rgba(0, 0, 0, 0.24);
+          --rk-shadows-selectedWallet: 0px 2px 6px rgba(0, 0, 0, 0.24);
+          --rk-shadows-walletLogo: 0px 2px 16px rgba(0, 0, 0, 0.16);
+        }
+      </style>
+      <div class="relative w-full h-full">
+        <div class="relative w-full h-full flex-1">
+          <div class="absolute overflow-hidden inset-0 flex-col justify-center flex">
+            <div class="absolute left-4 md:left-[64px] top-4 md:top-8 z-10"><a href="https://airdrop.sign.global/"><svg
+                  xmlns="http://www.w3.org/2000/svg" width="106" height="60" viewBox="0 0 106 60" fill="none">
+                  <g opacity="0.7" filter="url(#filter0_f_463_730)">
+                    <path
+                      d="M67.1949 38.3424L75.8943 23.4652L81.862 23.2131C79.8448 26.0148 77.9116 28.8726 76.0624 31.7864L76.1465 31.8704C76.8749 30.9459 77.6874 29.9512 78.584 28.8866C79.4805 27.8219 80.4191 26.8413 81.3997 25.9448C82.4084 25.0202 83.431 24.2497 84.4676 23.6333C85.5323 23.017 86.5829 22.7088 87.6196 22.7088C88.6842 22.7088 89.5668 22.9889 90.2672 23.5493C90.9957 24.0816 91.3599 24.9081 91.3599 26.0288C91.3599 26.9534 91.0657 27.906 90.4774 28.8866C89.917 29.8672 89.2866 30.8338 88.5862 31.7864C87.8857 32.711 87.2413 33.6075 86.653 34.4761C86.0926 35.3166 85.8125 36.059 85.8125 36.7034C85.8125 36.9836 85.8825 37.2358 86.0226 37.4599C86.1907 37.656 86.4429 37.7541 86.7791 37.7541C87.3954 37.7541 88.0959 37.4739 88.8804 36.9136C89.6648 36.3252 90.4774 35.6108 91.3179 34.7702C91.9623 34.1258 92.6067 33.4394 93.2511 32.711C93.8955 31.9545 94.4978 31.24 95.0582 30.5676C95.6185 29.8672 96.1228 29.2368 96.5711 28.6765C97.0194 28.0881 97.3696 27.6258 97.6218 27.2896L98 27.4997C97.0474 28.7605 96.0248 30.0633 94.9321 31.4081C93.8675 32.753 92.7888 33.9857 91.6961 35.1064C90.5474 36.2832 89.4267 37.2077 88.334 37.8802C87.2694 38.5246 86.1767 38.8468 85.056 38.8468C83.7952 38.8468 82.8426 38.4825 82.1982 37.7541C81.5818 36.9976 81.2737 36.031 81.2737 34.8543C81.2737 33.8457 81.5398 32.8931 82.0721 31.9965C82.6325 31.0719 83.2489 30.2174 83.9213 29.4329C84.5937 28.6204 85.1961 27.878 85.7284 27.2055C86.2888 26.5331 86.5689 25.9027 86.5689 25.3144C86.5689 24.5299 86.1907 24.1376 85.4342 24.1376C84.9299 24.1376 84.3135 24.4038 83.5851 24.9361C82.8566 25.4405 82.0721 26.1129 81.2316 26.9534C80.3911 27.7939 79.5366 28.7325 78.668 29.7691C77.7995 30.8058 76.973 31.8424 76.1885 32.8791C75.432 33.9157 74.7596 34.8963 74.1713 35.8209C73.6109 36.7455 73.1907 37.5019 72.9105 38.0903L67.1949 38.3424Z"
+                      fill="url(#paint0_linear_463_730)"></path>
+                    <path
+                      d="M47.2702 34.434C47.2702 32.9771 47.6345 31.5482 48.3629 30.1474C49.1194 28.7465 50.086 27.4997 51.2627 26.4071C52.4674 25.2864 53.8123 24.3898 55.2972 23.7174C56.7821 23.045 58.281 22.7088 59.794 22.7088C60.6905 22.7088 61.475 22.8769 62.1474 23.2131C62.8479 23.5213 63.4362 24.1797 63.9125 25.1883L64.9212 23.2131L70.7628 22.9609C69.3059 25.4545 67.849 27.906 66.3921 30.3155C64.9632 32.6969 63.5343 35.1064 62.1054 37.5439C63.3942 37.0957 64.627 36.5073 65.8037 35.7789C67.0084 35.0224 68.1431 34.1959 69.2078 33.2993C70.2725 32.3747 71.2811 31.3941 72.2337 30.3575C73.2143 29.3209 74.1249 28.2842 74.9654 27.2476L75.2596 27.5418C74.419 28.6064 73.4805 29.6851 72.4438 30.7778C71.4072 31.8704 70.3145 32.8931 69.1658 33.8457C68.0171 34.7982 66.8123 35.6528 65.5515 36.4092C64.3188 37.1657 63.044 37.7401 61.7272 38.1323C60.6625 40.2896 59.4017 42.2228 57.9448 43.9319C56.4879 45.641 54.905 47.0839 53.1959 48.2606C51.5149 49.4653 49.7498 50.3759 47.9006 50.9923C46.0515 51.6367 44.1883 51.9589 42.3112 51.9589C41.1624 51.9589 40.0277 51.8468 38.9071 51.6227C37.7864 51.3985 36.7917 51.0343 35.9232 50.53C35.0267 50.0537 34.3122 49.4233 33.7799 48.6388C33.2195 47.8823 32.9394 46.9438 32.9394 45.8231C32.9394 45.0946 33.0935 44.4082 33.4016 43.7638C33.6818 43.1474 34.1301 42.6011 34.7465 42.1248C35.3629 41.6485 36.1614 41.2703 37.142 40.9901C38.1226 40.7379 39.2993 40.6118 40.6721 40.6118H43.3618V41.1162H42.4372C41.0924 41.1162 40.0137 41.5084 39.2012 42.2929C38.3887 43.0774 37.9825 44.2961 37.9825 45.9492C37.9825 46.7056 38.0946 47.4201 38.3187 48.0925C38.5428 48.7649 38.879 49.3392 39.3273 49.8155C39.7476 50.3199 40.2659 50.7121 40.8823 50.9923C41.4706 51.3005 42.1431 51.4546 42.8995 51.4546C44.6086 51.4546 46.2476 50.8242 47.8166 49.5634C49.3575 48.3026 50.8144 46.6636 52.1873 44.6463L58.6173 35.2745L58.5332 35.1905C57.5526 36.3392 56.4179 37.2358 55.1291 37.8802C53.8683 38.5246 52.5655 38.8468 51.2207 38.8468C49.9599 38.8468 48.9793 38.4405 48.2789 37.628C47.6064 36.7875 47.2702 35.7228 47.2702 34.434ZM52.7336 35.0644C52.7336 35.5967 52.8177 36.087 52.9858 36.5353C53.1819 36.9556 53.6021 37.1657 54.2465 37.1657C54.8349 37.1657 55.4513 36.9696 56.0957 36.5773C56.7401 36.1571 57.3705 35.6248 57.9869 34.9804C58.6032 34.3079 59.1916 33.5515 59.752 32.711C60.3123 31.8704 60.7886 31.0159 61.1808 30.1474C61.6011 29.2508 61.9373 28.3963 62.1895 27.5838C62.4416 26.7433 62.5677 26.0008 62.5677 25.3564C62.5677 24.684 62.3856 24.1657 62.0214 23.8014C61.6852 23.4092 61.2369 23.2131 60.6765 23.2131C60.0882 23.2131 59.4858 23.4092 58.8694 23.8014C58.253 24.1937 57.6507 24.712 57.0623 25.3564C56.4739 25.9728 55.9136 26.7012 55.3813 27.5418C54.8489 28.3543 54.3866 29.2088 53.9944 30.1053C53.6021 30.9739 53.294 31.8424 53.0698 32.711C52.8457 33.5515 52.7336 34.336 52.7336 35.0644Z"
+                      fill="url(#paint1_linear_463_730)"></path>
+                    <path
+                      d="M47.7197 23.2145C46.8232 24.6434 45.9406 26.0303 45.0721 27.3751C44.2035 28.7199 43.4331 29.9807 42.7606 31.1575C42.0882 32.3062 41.5419 33.3288 41.1216 34.2254C40.7294 35.1219 40.5333 35.8364 40.5333 36.3687C40.5333 36.7609 40.6033 37.0971 40.7434 37.3773C40.8835 37.6295 41.1356 37.7555 41.4999 37.7555C42.0602 37.7555 42.6626 37.5594 43.307 37.1672C43.9794 36.7469 44.6658 36.2286 45.3662 35.6122C46.0667 34.9678 46.7671 34.2534 47.4675 33.4689C48.168 32.6564 48.8264 31.8719 49.4428 31.1154C50.0592 30.3309 50.6055 29.6025 51.0818 28.9301C51.5861 28.2296 51.9924 27.6693 52.3005 27.249L52.6367 27.3751C51.9643 28.3277 51.1238 29.4904 50.1152 30.8633C49.1066 32.2081 47.9719 33.5249 46.7111 34.8137C45.4223 36.1305 44.2315 37.1392 43.1389 37.8396C42.0462 38.512 40.8274 38.8482 39.4826 38.8482C38.3339 38.8482 37.4654 38.526 36.877 37.8816C36.2886 37.2092 35.9944 36.2846 35.9944 35.1079C35.9944 33.8471 36.5268 32.2781 37.5914 30.401C38.6841 28.4958 40.057 26.1564 41.71 23.3826L47.7197 23.2145ZM45.5764 16.6585C45.5764 15.846 45.8566 15.1595 46.4169 14.5992C47.0053 14.0108 47.7057 13.7167 48.5182 13.7167C49.3307 13.7167 50.0171 14.0108 50.5775 14.5992C51.1658 15.1595 51.46 15.846 51.46 16.6585C51.46 17.471 51.1658 18.1714 50.5775 18.7598C50.0171 19.3201 49.3307 19.6003 48.5182 19.6003C47.7057 19.6003 47.0053 19.3201 46.4169 18.7598C45.8566 18.1714 45.5764 17.471 45.5764 16.6585Z"
+                      fill="url(#paint2_linear_463_730)"></path>
+                    <path
+                      d="M41.5788 12.4968C41.5788 11.4321 41.3126 10.5356 40.7803 9.80712C40.276 9.05065 39.4495 8.67242 38.3008 8.67242C37.2361 8.67242 36.3676 9.07867 35.6951 9.89117C35.0227 10.6757 34.4904 11.7543 34.0982 13.1272C33.7059 14.5 33.4257 16.111 33.2576 17.9602C33.1175 19.7813 33.0475 21.7425 33.0475 23.8438C33.0475 26.2253 32.7113 28.3546 32.0389 30.2318C31.3945 32.1089 30.4279 33.7059 29.1391 35.0227C27.8783 36.3115 26.3093 37.3061 24.4322 38.0066C22.583 38.679 20.4537 39.0152 18.0442 39.0152C16.7274 39.0152 15.4666 38.8471 14.2619 38.5109C13.0571 38.1747 11.9925 37.6844 11.0679 37.04C10.1433 36.3956 9.40087 35.5971 8.84052 34.6445C8.28017 33.6919 8 32.5852 8 31.3244C8 30.7921 8.05603 30.2458 8.1681 29.6854C8.30819 29.1251 8.51832 28.6208 8.79849 28.1725C9.07867 27.6962 9.44289 27.318 9.89117 27.0378C10.3394 26.7296 10.8718 26.5755 11.4882 26.5755C12.2726 26.5755 12.917 26.8277 13.4214 27.332C13.9537 27.8083 14.2198 28.4246 14.2198 29.1811C14.2198 29.9376 14.0097 30.582 13.5895 31.1143C13.1692 31.6186 12.5668 31.8988 11.7823 31.9548C11.6983 32.263 11.6423 32.5292 11.6142 32.7533C11.6142 32.9775 11.6142 33.2156 11.6142 33.4678C11.6142 34.0001 11.7403 34.5745 11.9925 35.1908C12.2726 35.7792 12.6649 36.3255 13.1692 36.8298C13.7015 37.3342 14.3599 37.7544 15.1444 38.0906C15.9289 38.3988 16.8395 38.5389 17.8761 38.5109C19.333 38.4829 20.5798 38.2307 21.6164 37.7544C22.6531 37.2781 23.5216 36.6477 24.222 35.8632C24.9505 35.0507 25.5248 34.1262 25.9451 33.0895C26.3934 32.0249 26.7296 30.9182 26.9537 29.7695C27.2059 28.5927 27.374 27.402 27.458 26.1973C27.5421 24.9645 27.5841 23.7878 27.5841 22.6671C27.5841 20.6778 27.8083 18.8007 28.2565 17.0356C28.7328 15.2425 29.4613 13.6875 30.4419 12.3707C31.4505 11.0259 32.7253 9.96122 34.2663 9.17673C35.8352 8.39224 37.7264 8 39.9398 8C40.6962 8 41.4527 8.08405 42.2092 8.25216C42.9937 8.42026 43.6941 8.70043 44.3105 9.09268C44.9549 9.4569 45.4732 9.94721 45.8654 10.5636C46.2577 11.152 46.4538 11.8804 46.4538 12.7489C46.4538 13.6455 46.2157 14.3739 45.7394 14.9343C45.2911 15.4666 44.7167 15.8869 44.0163 16.1951C43.3159 16.4752 42.5594 16.6714 41.7469 16.7834C40.9344 16.8675 40.1779 16.9095 39.4775 16.9095C40.1499 16.3212 40.6682 15.6627 41.0324 14.9343C41.3967 14.2058 41.5788 13.3933 41.5788 12.4968Z"
+                      fill="url(#paint3_linear_463_730)"></path>
+                  </g>
+                  <path
+                    d="M67.1949 38.3424L75.8943 23.4652L81.862 23.2131C79.8448 26.0148 77.9116 28.8726 76.0624 31.7864L76.1465 31.8704C76.8749 30.9459 77.6874 29.9512 78.584 28.8866C79.4805 27.8219 80.4191 26.8413 81.3997 25.9448C82.4084 25.0202 83.431 24.2497 84.4676 23.6333C85.5323 23.017 86.5829 22.7088 87.6196 22.7088C88.6842 22.7088 89.5668 22.9889 90.2672 23.5493C90.9957 24.0816 91.3599 24.9081 91.3599 26.0288C91.3599 26.9534 91.0657 27.906 90.4774 28.8866C89.917 29.8672 89.2866 30.8338 88.5862 31.7864C87.8857 32.711 87.2413 33.6075 86.653 34.4761C86.0926 35.3166 85.8125 36.059 85.8125 36.7034C85.8125 36.9836 85.8825 37.2358 86.0226 37.4599C86.1907 37.656 86.4429 37.7541 86.7791 37.7541C87.3954 37.7541 88.0959 37.4739 88.8804 36.9136C89.6648 36.3252 90.4774 35.6108 91.3179 34.7702C91.9623 34.1258 92.6067 33.4394 93.2511 32.711C93.8955 31.9545 94.4978 31.24 95.0582 30.5676C95.6185 29.8672 96.1228 29.2368 96.5711 28.6765C97.0194 28.0881 97.3696 27.6258 97.6218 27.2896L98 27.4997C97.0474 28.7605 96.0248 30.0633 94.9321 31.4081C93.8675 32.753 92.7888 33.9857 91.6961 35.1064C90.5474 36.2832 89.4267 37.2077 88.334 37.8802C87.2694 38.5246 86.1767 38.8468 85.056 38.8468C83.7952 38.8468 82.8426 38.4825 82.1982 37.7541C81.5818 36.9976 81.2737 36.031 81.2737 34.8543C81.2737 33.8457 81.5398 32.8931 82.0721 31.9965C82.6325 31.0719 83.2489 30.2174 83.9213 29.4329C84.5937 28.6204 85.1961 27.878 85.7284 27.2055C86.2888 26.5331 86.5689 25.9027 86.5689 25.3144C86.5689 24.5299 86.1907 24.1376 85.4342 24.1376C84.9299 24.1376 84.3135 24.4038 83.5851 24.9361C82.8566 25.4405 82.0721 26.1129 81.2316 26.9534C80.3911 27.7939 79.5366 28.7325 78.668 29.7691C77.7995 30.8058 76.973 31.8424 76.1885 32.8791C75.432 33.9157 74.7596 34.8963 74.1713 35.8209C73.6109 36.7455 73.1907 37.5019 72.9105 38.0903L67.1949 38.3424Z"
+                    fill="url(#paint4_linear_463_730)"></path>
+                  <path
+                    d="M47.2702 34.434C47.2702 32.9771 47.6345 31.5482 48.3629 30.1474C49.1194 28.7465 50.086 27.4997 51.2627 26.4071C52.4674 25.2864 53.8123 24.3898 55.2972 23.7174C56.7821 23.045 58.281 22.7088 59.794 22.7088C60.6905 22.7088 61.475 22.8769 62.1474 23.2131C62.8479 23.5213 63.4362 24.1797 63.9125 25.1883L64.9212 23.2131L70.7628 22.9609C69.3059 25.4545 67.849 27.906 66.3921 30.3155C64.9632 32.6969 63.5343 35.1064 62.1054 37.5439C63.3942 37.0957 64.627 36.5073 65.8037 35.7789C67.0084 35.0224 68.1431 34.1959 69.2078 33.2993C70.2725 32.3747 71.2811 31.3941 72.2337 30.3575C73.2143 29.3209 74.1249 28.2842 74.9654 27.2476L75.2596 27.5418C74.419 28.6064 73.4805 29.6851 72.4438 30.7778C71.4072 31.8704 70.3145 32.8931 69.1658 33.8457C68.0171 34.7982 66.8123 35.6528 65.5515 36.4092C64.3188 37.1657 63.044 37.7401 61.7272 38.1323C60.6625 40.2896 59.4017 42.2228 57.9448 43.9319C56.4879 45.641 54.905 47.0839 53.1959 48.2606C51.5149 49.4653 49.7498 50.3759 47.9006 50.9923C46.0515 51.6367 44.1883 51.9589 42.3112 51.9589C41.1624 51.9589 40.0277 51.8468 38.9071 51.6227C37.7864 51.3985 36.7917 51.0343 35.9232 50.53C35.0267 50.0537 34.3122 49.4233 33.7799 48.6388C33.2195 47.8823 32.9394 46.9438 32.9394 45.8231C32.9394 45.0946 33.0935 44.4082 33.4016 43.7638C33.6818 43.1474 34.1301 42.6011 34.7465 42.1248C35.3629 41.6485 36.1614 41.2703 37.142 40.9901C38.1226 40.7379 39.2993 40.6118 40.6721 40.6118H43.3618V41.1162H42.4372C41.0924 41.1162 40.0137 41.5084 39.2012 42.2929C38.3887 43.0774 37.9825 44.2961 37.9825 45.9492C37.9825 46.7056 38.0946 47.4201 38.3187 48.0925C38.5428 48.7649 38.879 49.3392 39.3273 49.8155C39.7476 50.3199 40.2659 50.7121 40.8823 50.9923C41.4706 51.3005 42.1431 51.4546 42.8995 51.4546C44.6086 51.4546 46.2476 50.8242 47.8166 49.5634C49.3575 48.3026 50.8144 46.6636 52.1873 44.6463L58.6173 35.2745L58.5332 35.1905C57.5526 36.3392 56.4179 37.2358 55.1291 37.8802C53.8683 38.5246 52.5655 38.8468 51.2207 38.8468C49.9599 38.8468 48.9793 38.4405 48.2789 37.628C47.6064 36.7875 47.2702 35.7228 47.2702 34.434ZM52.7336 35.0644C52.7336 35.5967 52.8177 36.087 52.9858 36.5353C53.1819 36.9556 53.6021 37.1657 54.2465 37.1657C54.8349 37.1657 55.4513 36.9696 56.0957 36.5773C56.7401 36.1571 57.3705 35.6248 57.9869 34.9804C58.6032 34.3079 59.1916 33.5515 59.752 32.711C60.3123 31.8704 60.7886 31.0159 61.1808 30.1474C61.6011 29.2508 61.9373 28.3963 62.1895 27.5838C62.4416 26.7433 62.5677 26.0008 62.5677 25.3564C62.5677 24.684 62.3856 24.1657 62.0214 23.8014C61.6852 23.4092 61.2369 23.2131 60.6765 23.2131C60.0882 23.2131 59.4858 23.4092 58.8694 23.8014C58.253 24.1937 57.6507 24.712 57.0623 25.3564C56.4739 25.9728 55.9136 26.7012 55.3813 27.5418C54.8489 28.3543 54.3866 29.2088 53.9944 30.1053C53.6021 30.9739 53.294 31.8424 53.0698 32.711C52.8457 33.5515 52.7336 34.336 52.7336 35.0644Z"
+                    fill="url(#paint5_linear_463_730)"></path>
+                  <path
+                    d="M47.7197 23.2145C46.8232 24.6434 45.9406 26.0303 45.0721 27.3751C44.2035 28.7199 43.4331 29.9807 42.7606 31.1575C42.0882 32.3062 41.5419 33.3288 41.1216 34.2254C40.7294 35.1219 40.5333 35.8364 40.5333 36.3687C40.5333 36.7609 40.6033 37.0971 40.7434 37.3773C40.8835 37.6295 41.1356 37.7555 41.4999 37.7555C42.0602 37.7555 42.6626 37.5594 43.307 37.1672C43.9794 36.7469 44.6658 36.2286 45.3662 35.6122C46.0667 34.9678 46.7671 34.2534 47.4675 33.4689C48.168 32.6564 48.8264 31.8719 49.4428 31.1154C50.0592 30.3309 50.6055 29.6025 51.0818 28.9301C51.5861 28.2296 51.9924 27.6693 52.3005 27.249L52.6367 27.3751C51.9643 28.3277 51.1238 29.4904 50.1152 30.8633C49.1066 32.2081 47.9719 33.5249 46.7111 34.8137C45.4223 36.1305 44.2315 37.1392 43.1389 37.8396C42.0462 38.512 40.8274 38.8482 39.4826 38.8482C38.3339 38.8482 37.4654 38.526 36.877 37.8816C36.2886 37.2092 35.9944 36.2846 35.9944 35.1079C35.9944 33.8471 36.5268 32.2781 37.5914 30.401C38.6841 28.4958 40.057 26.1564 41.71 23.3826L47.7197 23.2145ZM45.5764 16.6585C45.5764 15.846 45.8566 15.1595 46.4169 14.5992C47.0053 14.0108 47.7057 13.7167 48.5182 13.7167C49.3307 13.7167 50.0171 14.0108 50.5775 14.5992C51.1658 15.1595 51.46 15.846 51.46 16.6585C51.46 17.471 51.1658 18.1714 50.5775 18.7598C50.0171 19.3201 49.3307 19.6003 48.5182 19.6003C47.7057 19.6003 47.0053 19.3201 46.4169 18.7598C45.8566 18.1714 45.5764 17.471 45.5764 16.6585Z"
+                    fill="url(#paint6_linear_463_730)"></path>
+                  <path
+                    d="M41.5788 12.4968C41.5788 11.4321 41.3126 10.5356 40.7803 9.80712C40.276 9.05065 39.4495 8.67242 38.3008 8.67242C37.2361 8.67242 36.3676 9.07867 35.6951 9.89117C35.0227 10.6757 34.4904 11.7543 34.0982 13.1272C33.7059 14.5 33.4257 16.111 33.2576 17.9602C33.1175 19.7813 33.0475 21.7425 33.0475 23.8438C33.0475 26.2253 32.7113 28.3546 32.0389 30.2318C31.3945 32.1089 30.4279 33.7059 29.1391 35.0227C27.8783 36.3115 26.3093 37.3061 24.4322 38.0066C22.583 38.679 20.4537 39.0152 18.0442 39.0152C16.7274 39.0152 15.4666 38.8471 14.2619 38.5109C13.0571 38.1747 11.9925 37.6844 11.0679 37.04C10.1433 36.3956 9.40087 35.5971 8.84052 34.6445C8.28017 33.6919 8 32.5852 8 31.3244C8 30.7921 8.05603 30.2458 8.1681 29.6854C8.30819 29.1251 8.51832 28.6208 8.79849 28.1725C9.07867 27.6962 9.44289 27.318 9.89117 27.0378C10.3394 26.7296 10.8718 26.5755 11.4882 26.5755C12.2726 26.5755 12.917 26.8277 13.4214 27.332C13.9537 27.8083 14.2198 28.4246 14.2198 29.1811C14.2198 29.9376 14.0097 30.582 13.5895 31.1143C13.1692 31.6186 12.5668 31.8988 11.7823 31.9548C11.6983 32.263 11.6423 32.5292 11.6142 32.7533C11.6142 32.9775 11.6142 33.2156 11.6142 33.4678C11.6142 34.0001 11.7403 34.5745 11.9925 35.1908C12.2726 35.7792 12.6649 36.3255 13.1692 36.8298C13.7015 37.3342 14.3599 37.7544 15.1444 38.0906C15.9289 38.3988 16.8395 38.5389 17.8761 38.5109C19.333 38.4829 20.5798 38.2307 21.6164 37.7544C22.6531 37.2781 23.5216 36.6477 24.222 35.8632C24.9505 35.0507 25.5248 34.1262 25.9451 33.0895C26.3934 32.0249 26.7296 30.9182 26.9537 29.7695C27.2059 28.5927 27.374 27.402 27.458 26.1973C27.5421 24.9645 27.5841 23.7878 27.5841 22.6671C27.5841 20.6778 27.8083 18.8007 28.2565 17.0356C28.7328 15.2425 29.4613 13.6875 30.4419 12.3707C31.4505 11.0259 32.7253 9.96122 34.2663 9.17673C35.8352 8.39224 37.7264 8 39.9398 8C40.6962 8 41.4527 8.08405 42.2092 8.25216C42.9937 8.42026 43.6941 8.70043 44.3105 9.09268C44.9549 9.4569 45.4732 9.94721 45.8654 10.5636C46.2577 11.152 46.4538 11.8804 46.4538 12.7489C46.4538 13.6455 46.2157 14.3739 45.7394 14.9343C45.2911 15.4666 44.7167 15.8869 44.0163 16.1951C43.3159 16.4752 42.5594 16.6714 41.7469 16.7834C40.9344 16.8675 40.1779 16.9095 39.4775 16.9095C40.1499 16.3212 40.6682 15.6627 41.0324 14.9343C41.3967 14.2058 41.5788 13.3933 41.5788 12.4968Z"
+                    fill="url(#paint7_linear_463_730)"></path>
+                  <defs>
+                    <filter id="filter0_f_463_730" x="0.307198" y="0.307198" width="105.386" height="59.3445"
+                      filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                      <feGaussianBlur stdDeviation="3.8464" result="effect1_foregroundBlur_463_730"></feGaussianBlur>
+                    </filter>
+                    <linearGradient id="paint0_linear_463_730" x1="76.3808" y1="29.2223" x2="97.9229" y2="32.4132"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#E14603"></stop>
+                      <stop offset="1" stop-color="#EB8E2E"></stop>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear_463_730" x1="45.5589" y1="34.5145" x2="75.4265" y2="37.8679"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#E14603"></stop>
+                      <stop offset="1" stop-color="#EB8E2E"></stop>
+                    </linearGradient>
+                    <linearGradient id="paint2_linear_463_730" x1="40.9571" y1="23.8601" x2="52.8191" y2="24.4697"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#E14603"></stop>
+                      <stop offset="1" stop-color="#EB8E2E"></stop>
+                    </linearGradient>
+                    <linearGradient id="paint3_linear_463_730" x1="19.4666" y1="20.5182" x2="46.6955" y2="23.1379"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#E14603"></stop>
+                      <stop offset="1" stop-color="#EB8E2E"></stop>
+                    </linearGradient>
+                    <linearGradient id="paint4_linear_463_730" x1="76.3808" y1="29.2223" x2="97.9229" y2="32.4132"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#E14603"></stop>
+                      <stop offset="1" stop-color="#EB8E2E"></stop>
+                    </linearGradient>
+                    <linearGradient id="paint5_linear_463_730" x1="45.5589" y1="34.5145" x2="75.4265" y2="37.8679"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#E14603"></stop>
+                      <stop offset="1" stop-color="#EB8E2E"></stop>
+                    </linearGradient>
+                    <linearGradient id="paint6_linear_463_730" x1="40.9571" y1="23.8601" x2="52.8191" y2="24.4697"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#E14603"></stop>
+                      <stop offset="1" stop-color="#EB8E2E"></stop>
+                    </linearGradient>
+                    <linearGradient id="paint7_linear_463_730" x1="19.4666" y1="20.5182" x2="46.6955" y2="23.1379"
+                      gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#E14603"></stop>
+                      <stop offset="1" stop-color="#EB8E2E"></stop>
+                    </linearGradient>
+                  </defs>
+                </svg></a></div>
+            <div class="">
+              <div class="flex w-full shrink-0">
+                <div class="flex size-[200px] md:size-[350px] items-center justify-center m-auto"><video preload="auto"
+                    playsinline="" autoplay="" muted="" loop=""
+                    class="aspect-[1920/1080] w-[1920px] object-[30px,20px] max-w-none shrink-0 pointer-events-none scale-[0.45] sm:scale-[0.6] md:scale-100"
+                    src="sign_video.mp4" type="video/mp4"></video></div><svg
+                  class="rotate-[-34.5deg] absolute right-[-600px] top-[-300px] z-10 pointer-events-none" width="1397"
+                  height="954" viewBox="0 0 1397 954" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g opacity="0.2" filter="url(#filter0_f_204_3)">
+                    <path d="M276.079 340.771L1120.41 276.66L1117.19 677.824L276.079 597.605V340.771Z" fill="#FFDCB9">
+                    </path>
+                  </g>
+                  <defs>
+                    <filter id="filter0_f_204_3" x="0.177673" y="0.759094" width="1396.14" height="952.966"
+                      filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+                      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+                      <feGaussianBlur stdDeviation="137.951" result="effect1_foregroundBlur_204_3"></feGaussianBlur>
+                    </filter>
+                  </defs>
+                </svg>
+              </div>
+              <div class="relative mt-6 px-4 md:px-0">
+                <div class="text-[25px] md:text-[31px] font-bold text-center w-auto md:w-[674px] m-auto">Connect your
+                  EVM wallet to check <br> the first $SIGN you're seeing</div>
+                <div class="text-[17px] font-normal text-center text-white/70 mt-6">Remember this is just the beginning,
+                  dear Signee</div>
+                <div class="mt-12">
+                  <div class="flex flex-col md:flex-row justify-center gap-5 items-center"><button
+                      class="connectButton inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background bg-primary text-primary-foreground px-4 rounded-[48px] gap-2 w-full md:w-[240px] h-12 text-md hover:bg-[#B74213]"
+                      style="box-shadow: rgba(255, 123, 1, 0.6) 0px 0px 25px 0px;">Connect EVM Wallet</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;">
+      <ol tabindex="-1"
+        class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]">
+      </ol>
+    </div>
+  </div>
+  <!-- Google tag (gtag.js) -->
+
+
+
+
+  <div id="tc-widget-root"><tc-root></tc-root></div><wcm-modal data-scrapbook-adoptedstylesheets="0,1"
+    data-scrapbook-shadowdom="<!----><wcm-explorer-context data-scrapbook-shadowdom=&quot;<!---->&quot;></wcm-explorer-context><wcm-theme-context data-scrapbook-shadowdom=&quot;<!---->&quot;></wcm-theme-context><div id=&quot;wcm-modal&quot; role=&quot;alertdialog&quot; aria-modal=&quot;true&quot; class=&quot; wcm-overlay &quot;><div class=&quot;wcm-container&quot; tabindex=&quot;0&quot;><!--?lit$5635433587$--></div></div>"></wcm-modal>
+  <script
+    data-scrapbook-elem="basic-loader">(function () { var k1 = "data-scrapbook-shadowdom", k2 = "data-scrapbook-canvas", k3 = "data-scrapbook-input-indeterminate", k4 = "data-scrapbook-input-checked", k5 = "data-scrapbook-option-selected", k6 = "data-scrapbook-input-value", k7 = "data-scrapbook-textarea-value", k8 = "data-scrapbook-adoptedstylesheets", k9 = /^data-scrapbook-adoptedstylesheet-(\d+)$/, k10 = "data-scrapbook-shadowdom-mode", k11 = "data-scrapbook-shadowdom-clonable", k12 = "data-scrapbook-shadowdom-delegates-focus", k13 = "data-scrapbook-shadowdom-serializable", k14 = "data-scrapbook-shadowdom-slot-assignment", k15 = "data-scrapbook-slot-assigned", k16 = "data-scrapbook-slot-index", k17 = /^scrapbook-slot-index=(\d+)$/, k18 = '/scrapbook-slot-index', d = document, r = d.documentElement, $s = !!r.attachShadow, $as = !!d.adoptedStyleSheets, $c = !!window.HTMLCanvasElement, $sa = !!d.createElement('slot').assign, sle = [], sls = [], slt = function (r) { if ($sa) { var E = r.childNodes, i, e, s, m; for (i = 0; i < E.length; i++) { e = E[i]; if (e.nodeType === 8) { s = e.nodeValue; if (m = s.match(k17)) { s = e.nextSibling; if (s.nodeType === 3) { sls[m[1]] = s; } r.removeChild(e); i--; } else if (s === k18) { r.removeChild(e); i--; } } } } }, sl = function () { var i = sle.length, j, d, e; while (i--) { d = sle[i]; e = d.elem; d = d.value.split(','); j = d.length; while (j--) { d[j] = sls[parseInt(d[j], 10)]; } try { e.assign.apply(e, d); } catch (ex) { console.error(ex); } } }, asl = (function (r) { var l = [], E, i, e, m, c, j; if ($as) { E = r.attributes; i = E.length; while (i--) { e = E[i]; if (!(m = e.nodeName.match(k9))) { continue; } c = l[m[1]] = new CSSStyleSheet(); r.removeAttribute(m[0]); m = e.nodeValue.split('\n\n'); j = m.length; while (j--) { try { m[j] && c.insertRule(m[j]); } catch (ex) { console.error(ex); } } } } return l; })(r), as = function (d, e) { var l, i, I; if ($as && (l = e.getAttribute(k8)) !== null) { l = l.split(','); for (i = 0, I = l.length; i < I; i++) { d.adoptedStyleSheets.push(asl[l[i]]); } e.removeAttribute(k8); } }, fn = function (r) { var E = r.querySelectorAll ? r.querySelectorAll("*") : r.getElementsByTagName("*"), i = E.length, e, d, s, m; while (i--) { e = E[i]; s = e.shadowRoot; if ($s && (d = e.getAttribute(k1))) { if (!s) { try { s = e.attachShadow({ mode: (m = e.getAttribute(k10)) !== null ? m : 'open', clonable: e.hasAttribute(k11), delegatesFocus: e.hasAttribute(k12), serializable: e.hasAttribute(k13), slotAssignment: (m = e.getAttribute(k14)) !== null ? m : void 0, }); s.innerHTML = d; } catch (ex) { console.error(ex); } } e.removeAttribute(k1); e.removeAttribute(k10); e.removeAttribute(k11); e.removeAttribute(k12); e.removeAttribute(k13); e.removeAttribute(k14); } if ($c && (d = e.getAttribute(k2)) !== null) { (function () { var c = e, g = new Image(); g.onload = function () { c.getContext('2d').drawImage(g, 0, 0); }; g.src = d; })(); e.removeAttribute(k2); } if ((d = e.getAttribute(k3)) !== null) { e.indeterminate = true; e.removeAttribute(k3); } if ((d = e.getAttribute(k4)) !== null) { e.checked = d === 'true'; e.removeAttribute(k4); } if ((d = e.getAttribute(k5)) !== null) { e.selected = d === 'true'; e.removeAttribute(k5); } if ((d = e.getAttribute(k6)) !== null) { e.value = d; e.removeAttribute(k6); } if ((d = e.getAttribute(k7)) !== null) { e.value = d; e.removeAttribute(k7); } if ($sa && (d = e.getAttribute(k15)) !== null) { sle.push({ elem: e, value: d }); e.removeAttribute(k15); } if ($sa && (d = e.getAttribute(k16)) !== null) { sls[d] = e; e.removeAttribute(k16); } if (s) { slt(e); as(s, e); fn(s); } } }; as(d, r); fn(d); sl(); })()</script>
+</body>
+
+
+<!-- Mirrored from sign-airdrop.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Apr 2025 13:24:43 GMT -->
+</html>
